@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        House Price Prediction
+    </title>
+    <style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container{
+    width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+h2,h3{
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+    <h2> House Price Prediction</h2>
+    
+    <form action="/predict" method="post">
+
+    <label>Crime Rate (CRIM)</label>
+    <input type="number" step="any" name="CRIM" placeholder="Enter CRIM value" required><br><br>
+
+    <label>Residential Land Zoned (ZN)</label>
+    <input type="number" step="any" name="ZN" placeholder="Enter ZN value" required><br><br>
+
+    <label>Non-Retail Business Acres (INDUS)</label>
+    <input type="number" step="any" name="INDUS" placeholder="Enter INDUS value" required><br><br>
+
+    <label>Charles River Dummy Variable (CHAS)</label>
+    <input type="number" step="any" name="CHAS" placeholder="Enter CHAS value" required><br><br>
+
+    <label>Nitric Oxides Concentration (NOX)</label>
+    <input type="number" step="any" name="NOX" placeholder="Enter NOX value" required><br><br>
+
+    <label>Average Number of Rooms (RM)</label>
+    <input type="number" step="any" name="RM" placeholder="Enter RM value" required><br><br>
+
+    <label>Age of Houses (AGE)</label>
+    <input type="number" step="any" name="AGE" placeholder="Enter AGE value" required><br><br>
+
+    <label>Distance to Employment Centers (DIS)</label>
+    <input type="number" step="any" name="DIS" placeholder="Enter DIS value" required><br><br>
+
+    <label>Accessibility to Highways (RAD)</label>
+    <input type="number" step="any" name="RAD" placeholder="Enter RAD value" required><br><br>
+
+    <label>Property Tax Rate (TAX)</label>
+    <input type="number" step="any" name="TAX" placeholder="Enter TAX value" required><br><br>
+
+    <label>Pupil-Teacher Ratio (PTRATIO)</label>
+    <input type="number" step="any" name="PTRATIO" placeholder="Enter PTRATIO value" required><br><br>
+
+    <label>Proportion of Black Population (B)</label>
+    <input type="number" step="any" name="B" placeholder="Enter B value" required><br><br>
+
+    <label>Lower Status Population (%) (LSTAT)</label>
+    <input type="number" step="any" name="LSTAT" placeholder="Enter LSTAT value" required><br><br>
+        
+    <button type="submit">Predict</button>
+    
+    </form>
+    </div>
+    
+    <div>
+            <h3>{{prediction_text}}</h3>
+    </div>
+</body>
+</html>
