@@ -29,12 +29,16 @@ def predict_api():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    data= [float(x) for x in request.form.values()]
-    final_input= np.array(data).reshape(1,-1)
-    scaled_input= scaler.transform(final_input)
-    prediction=model.predict(scaled_input)[0]
-    price=prediction*1000
-    return render_template("home.html",prediction_text=f"Estimated house price is ${price:,.2f}")
+    try:
+        data= [float(x) for x in request.form.values()]
+        final_input= np.array(data).reshape(1,-1)
+        scaled_input= scaler.transform(final_input)
+        prediction=model.predict(scaled_input)[0]
+        price=prediction*1000
+        return render_template("home.html",prediction_text=f"Estimated house price is ${price:,.2f}")
+    
+    except ValueError:
+        return render_template("home.html",prediction_text=f"Please fill in all fields with valid numbers")
 
 if __name__=="__main__":
     app.run(debug=True)
