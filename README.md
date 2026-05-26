@@ -38,6 +38,7 @@ Target Variable
 Values are measured in thousands of dollars.
 
 ## Project Workflow
+
 1. Data Collection
 - Loaded the Boston Housing dataset.
 - Performed initial inspection and validation.
