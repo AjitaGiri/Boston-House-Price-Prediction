@@ -106,10 +106,41 @@ The model explains approximately 71% of the variation in housing prices.
 - Accessibility and neighborhood-related factors influenced property valuation.
 - Multiple factors jointly contribute to housing price prediction.
 
+## Project Structure
+```text   
+ Boston-House-Price-Prediction/
+│
+├── app.py
+├── regmodel.pkl
+├── scaler.pkl
+├── requirements.txt
+│
+├── templates/
+│   └── home.html
+│
+└── notebooks/
+    └── HousePricePrediction.ipynb
+│
+├── screenshots/
+│   └──home_page.png
+│   └──prediction.png
+│    └──prediction_result.png
+├── README.md
+
+```
+## Application Screenshots
+### Home Page
+![Home Page](screenshots/home_page.png)
+
+### Prediction Result
+![Prediction Result](screenshots/prediction_result.png)
+![Prediction Result](screenshots/prediction.png)
+
 ## How to Run the Project
 
 ### Clone Repository
 git clone https://github.com/AjitaGiri/Boston-House-Price-Prediction.git
+
 cd Boston-House-Price-Prediction
 
 ### Create Virtual Environment
